@@ -1,0 +1,9 @@
+---
+ANumber: 145
+AFloat: 19.8075
+AString: Hello there Ben!
+
+         This is the second line of my string #Should be indented the same as the first line, a blank line -> new line
+AQuotedString: "Quotes are perfectly acceptable.\nThats right, a new line escape!"
+Active: true
+Active: False
