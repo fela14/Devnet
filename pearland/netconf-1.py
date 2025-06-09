@@ -1,7 +1,7 @@
 from ncclient import manager
 
-router = {"host": "devnetsandboxiosxe.cisco.com",
-          "port": "22", 
+router = {"host": "10.10.20.48",
+          "port": "830", 
           "username": "admin", 
           "password": "C1sco12345"}
 

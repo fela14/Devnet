@@ -1,7 +1,7 @@
 from ncclient import manager
 import xml.dom.minidom
 
-router = {"host": "ios-xe-mgmt-latest.cisco.com", "port": "10000", "username": "developer", "password": "Cisco12345"}
+router = {"host": "10.10.20.48", "port": "830", "username": "developer", "password": "Cisco12345"}
 
 netconf_filter = """
  <filter>
@@ -26,9 +26,7 @@ with manager.connect(host=router["host"], port=router["port"], username=router["
         xmlDom = xml.dom.minidom.parseString(str(interface_netconf))
         print(xmlDom.toprettyxml(indent=" "))
         print('*' * 25 + 'Break' + '*' * 50)
+        
     m.close_session()
  
 
-
-
-    m.close_session()

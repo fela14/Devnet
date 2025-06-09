@@ -1,3 +1,7 @@
+from yaml import load, load_all
+import xmltodict
+import yaml
+import json
 
 kids = ['Caleb', 'Sydney', 'Savanna']
 print(kids)
@@ -52,3 +56,51 @@ print(type(numbs))
 print(type(odds))
 print(numbs | odds)
 print(numbs & odds)
+
+stream = open('sample.json', 'r')
+document = json.load(stream)
+for doc in document:
+    print(doc)
+
+
+
+
+
+with open('custom.json', 'r') as data:
+    jsondata = data.read()
+    jsondict = json.loads(jsondata)
+    print(jsondict['Interface'][1]["description"])
+
+    jsondict['Interface'][1]["description"] = "Uplink -> Equinix"
+
+with open('custom.json', 'w') as jdata:
+    json.d = json.dump(jsondict, jdata, indent=2)
+    print(jsondict['Interface'][1]["description"])
+
+x = 0
+while True:
+    try:
+        # prompts user to enter name of file
+        filename = input("Which file would you like to open: ")
+        with open(filename, 'r') as data:
+            readfile = data.read()
+
+    except FileNotFoundError:
+        # error message for incorrect filename
+        print(f"Sorry {filename} was not found")
+
+    else:
+        # correct filename opens the file
+        print(readfile)
+        x = 0
+        break
+        
+    finally:
+        x += 1
+        if x == 3:
+            # maximum tries exceeded
+            print("Please check file name and rerun program")
+            break
+
+
+        

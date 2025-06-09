@@ -5,7 +5,7 @@
 	<enabled>true</enabled>
 	<ipv4>
 		<address>
-			<ip>192.168.5.5</ip>
+			<ip>192.168.6.5</ip>
 			<netmask>255.255.255.252</netmask>
 		</address>
 	</ipv4>

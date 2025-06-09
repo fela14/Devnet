@@ -14,7 +14,7 @@ print(xml_dict["interface"]["ipv4"])
 print(xml_dict["interface"]["ipv4"]["address"])
 print(xml_dict["interface"]["ipv4"]["address"]["ip"])
 
-xml_dict["interface"]["ipv4"]["address"]["ip"] = "192.168.5.5"
+xml_dict["interface"]["ipv4"]["address"]["ip"] = "192.168.6.5"
 xml_dict["interface"]["ipv4"]["address"]["netmask"] = "255.255.255.252"
 
 print(xml_dict["interface"]["ipv4"]["address"])
