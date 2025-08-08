@@ -1,0 +1,17 @@
+interfaces:
+- description: MainOne link
+  enabled: true
+  ipv4:
+    addresses:
+    - ip: 192.168.1.10
+      netmask: 255.255.255.0
+  name: my_eth
+- description: Airtel link
+  enabled: false
+  ipv4:
+    addresses:
+    - ip: 10.0.0.1
+      netmask: 255.255.0.0
+    - ip: 10.0.0.2
+      netmask: 255.255.0.0
+  name: your_eth

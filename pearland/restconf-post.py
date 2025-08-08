@@ -1,5 +1,9 @@
 import requests
 import json
+import urllib3
+
+# 🔇 Suppress SSL warnings (for self-signed certs in lab)
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Router connection details
 router = {
