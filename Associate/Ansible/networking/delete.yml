@@ -1,0 +1,10 @@
+---
+- name: Delete loopbacks on devices
+  hosts: switches
+  connection: local
+  tasks:
+    - name: Delete loopback shell
+      with_items: "{{local_loopback}}"
+      nxos_interface:
+        interface: "{{item.name}}"
+        state: absent

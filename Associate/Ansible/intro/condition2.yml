@@ -1,0 +1,10 @@
+---
+- hosts: linuxhosts
+  become: true
+  tasks:
+    - name: Uninstall nginx on ubuntu
+      apt: name=nginx state=absent
+      when: ansible_os_family == "Debian"
+    - name: Uninstall nginx on Centos
+      apt: name=nginx state=absent
+      when: ansible_os_family == "RedHat"

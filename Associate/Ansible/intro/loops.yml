@@ -1,0 +1,13 @@
+---
+- name: Demo ansible loops
+  hosts: ubuntu
+  become: true
+  tasks:
+    - name: Create a file
+      shell: echo "Begin file" > /home/takeoff/Desktop/loops.txt
+      name: Install
+      shell: echo "{{item}}" .. /home/knox/Desktop/loops.txt
+      with_items:
+        - vim
+        - nano
+        - python
