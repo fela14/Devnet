@@ -1,9 +1,17 @@
----
-- name: Create loopback payload from template
-  hosts: 172.16.1.25
-  connection: local
+{
+    "interface": {
+        "name": "{{item.name}}",
+        "description": "{{item.desc}}",
+        "type": "iana-if-type:softwareLoopback",
+        "enabled": true,
+        "ietf-ip:ipv4": {
+            "address": [
+                {
+                    "ip": "{{item.ip_address}}",
+                    "netmask": "{{item.prefix}}"
+                }
+            ]
+        }
+    }
+}
 
-  tasks:
-    - name: Create template
-      with_items: "{{local_loopback}}"
-      template: src="files/ietf.j2" dest="./output.json"
